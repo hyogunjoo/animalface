@@ -224,7 +224,7 @@
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
             console.log(prediction[0].className);
-
+            
             var resultTitle, resultExplain, resultCeleb;
             switch (prediction[0].className) {
                     case "dog":
